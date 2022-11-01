@@ -22,7 +22,7 @@ from imblearn.over_sampling import SMOTE
 from sklearn.metrics import confusion_matrix
 import seaborn as sns
 
-df = pd.read_excel('Training & Predicting Raw Data.xlsx') # gets data frame 
+df = pd.read_excel('Training & Predicting Raw Dataset.xlsx') # gets data frame 
 del df['Id'] # deletes the ID column
 del df['Role'] # deletes the Job Function column
 df.dropna(how='all', inplace=True) # removes row if each value is NaN
@@ -247,7 +247,7 @@ for index, row in predictDf.iterrows():
 LSTMFunctionPreds = pd.DataFrame(preds, columns=['Title', 'JobFunction'])
 
 # turn into excel sheets
-LSTMFunctionPreds.to_excel('LSTMFunctionUnder.xlsx')
+LSTMFunctionPreds.to_excel('PredictedFunction.xlsx')
 
 '''
 Job Function Classifier Metrics:
